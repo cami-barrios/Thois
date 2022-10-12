@@ -1,75 +1,96 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Login</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Signin Template · Bootstrap v5.2</title>
 
-<link
- rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
 
+    
 
-<link rel="stylesheet" href="https:/fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css">
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet"  href="css/style.css">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-</head>
-<body>
-<section class="intro">
-		
-<div class="mask d-flex aling-intems-center h-100 gradient-custom">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 col-xl-10">
-				<div class="card">
-					<div class="card-body-p5">
-						<div class="row d-flex aling-intems-center">
-							<div class="col-md-6 col-xl-7">
-								<div class="text-center pt-md-5 pb-5 my-md-5" style="padding-right:100px">
-									<!---<i class="fas fa-laptop" style="color:#d6d6d6"></i> ----->
-									<img class="mb-4" src="img/logosoft.png" alt="" width="400" height="300">
-								</div>								
-							</div>
-							<div class="col-md-6 col-xl-4 text-center">
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
 
-							<h2 class="fw-bold-md-4 pb-2">SIGN IN</h2>
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
 
-							<div class="form-outline mb-3">
-							<input type="email" id="typeEmail" class="form-control form-control-lg">
-							<label for="typeEmail" class="form-label">User</label>
-                            </div>
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
 
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
 
-                            <div class="form-outline mb-4">
-							<input type="password" id="typePassword" class="form-control form-control-lg">
-							<label for="typePassword"
-							class="form-label">Password</label>
-							</div>
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
 
-							<div class="text-center">
-								<a class="nav-link" href="index.html">
-								<button class="btn btn-info btn-block btn-lg">Ingresar</button>
-								</a>
-								<p class="small mt-3 mb-4 text-muted">Recuperar <span class="fw-bold"><a href="recuperar.html" class="text-muted">Password</a></span></p>
-								<p class="mt-5 mb-3 text-muted">&copy; 2022/2026</p>
-								<!---<a href="#:" class="link-info">Registrarse <i class="fas fa-long-arrow-alt-right"></i></a>---->
-							</div>
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
 
+    
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin w-100 m-auto">
+  <form action="index.html" method="post">
+    <img class="mb-4" src="thois.png" width="180" height="180">
+    <h1 class="h3 mb-3 fw-normal">Inicio de Sesion</h1>
 
-
-						</div>
-						</div>
-					</div>	
-				</div>	
-			</div>	
-		</div>	
-	</div>
-</div>
-</section>
-
-
-<script type="text/javascript"
-src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-
-kit/3.5.0/mdb.min.js"></script>
-</body>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Correo</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Contrasena</label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesion</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2022–2026</p>
+  </form>
+</main>
+  </body>
 </html>
