@@ -84,7 +84,7 @@
   <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="Login.html">Cerrar Sesión</a>
+      <a class="nav-link px-3" href="logout.php">Cerrar Sesión</a>
     </div>
   </div>
 </header>
@@ -190,74 +190,86 @@
         </div>
       </div>     
        
-       <div style="text-align: left;">
-         
+     <div>  
      <table> 
 
-      <tr>
+      <tr height="50">
+        <td colspan="2" bgcolor="#DAF1FF">Detalles de los Apartados</td>
+      </tr>
+
+      <tr >
         <td>
+          <br>
           <label for="referencia">Refrencia</label><br>
-          <input placeholder="Refrencia"type="number" id="referencia" name="referencia" required>
+          <input placeholder="Refrencia" type="number" id="referencia" name="referencia" required>
           <br><br>
         </td>
-
+        
         <td>
+          <br><br>
           <label for="plazo">Plazo a pagar</label><br>
          <input placeholder="Plazo"type="number" id="plazo" name="plazo" required>
          <br><br>
         </td>
-        <td>
-        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Apartar</button> 
-        <br><br>
-        </td>
+
       </tr>
 
       <tr>
         <td colspan="2">
           <label for="nom_producto">Nombre del producto</label><br>
-          <input placeholder="Producto"type="text" id="nom_producto" name="nom_producto" required>
+          <input placeholder="Producto"type="text" id="nom_producto" size="100" name="nom_producto" required>
           <br><br>
         </td>
 
-        <td>
-          <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Limpiar Pantalla</button>
-          <br><br>
-        </td>
+        
       </tr>
 
       <tr>
         <td colspan="2">
           <label for="nom_cliente">Nombre del cliente</label><br>
-          <input placeholder="Cliente"type="text" id="nom_cliente" name="nom_cliente" required>
+          <input placeholder="Cliente"type="text" id="nom_cliente" size="100" name="nom_cliente" required>
           <br><br>
         </td>
-        <td>
-          <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Buscar Apartado Existente </button> 
-          <br>
-        </td>
+      
       </tr>
 
       <tr>
-        <td>
-          <label for="cant">Cantidad del producto</label><br>
-         <input placeholder="Cantidad"type="number" id="cant" name="cant" required>
-         <br><br>
-        </td>
-        <td colspan="2">
+        <td> 
           <label for="cant">Cantidad del producto</label><br>
          <input placeholder="Cantidad"type="number" id="cant" name="cant" required>
          <br><br>
         </td>
 
+        <td>
+          <label for="cant">Cantidad del producto</label><br>
+         <input placeholder="Cantidad"type="number" id="cant" name="cant" required>
+         <br><br>
+        </td>
+      
       </tr>
 
       <tr>
-        <td colspan="2">         
+        <td colspan="2">      
           <label for="total">Valor total</label><br>
          <input placeholder="Total"type="number" id="total" name="total" required>
         <br><br>
       </td>
+
       </tr>
+
+      <tr>
+        
+        <br>
+        <td colspan="2">
+        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Apartar</button> 
+
+        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Buscar Apartado Existente </button> 
+
+        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Limpiar Pantalla</button>
+          <br><br>
+        </td>
+      </tr>
+
      </table>
         
       </div>
