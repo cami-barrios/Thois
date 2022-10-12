@@ -84,7 +84,7 @@
   <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="Login.html">Cerrar Sesión</a>
+      <a class="nav-link px-3" href="logout.php">Cerrar Sesión</a>
     </div>
   </div>
 </header>
@@ -190,135 +190,85 @@
         </div>
       </div>
 
-      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+     <div>  
+     <table> 
 
-      <h2>Section title</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1,001</td>
-              <td>random</td>
-              <td>data</td>
-              <td>placeholder</td>
-              <td>text</td>
-            </tr>
-            <tr>
-              <td>1,002</td>
-              <td>placeholder</td>
-              <td>irrelevant</td>
-              <td>visual</td>
-              <td>layout</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>data</td>
-              <td>rich</td>
-              <td>dashboard</td>
-              <td>tabular</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>information</td>
-              <td>placeholder</td>
-              <td>illustrative</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,004</td>
-              <td>text</td>
-              <td>random</td>
-              <td>layout</td>
-              <td>dashboard</td>
-            </tr>
-            <tr>
-              <td>1,005</td>
-              <td>dashboard</td>
-              <td>irrelevant</td>
-              <td>text</td>
-              <td>placeholder</td>
-            </tr>
-            <tr>
-              <td>1,006</td>
-              <td>dashboard</td>
-              <td>illustrative</td>
-              <td>rich</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,007</td>
-              <td>placeholder</td>
-              <td>tabular</td>
-              <td>information</td>
-              <td>irrelevant</td>
-            </tr>
-            <tr>
-              <td>1,008</td>
-              <td>random</td>
-              <td>data</td>
-              <td>placeholder</td>
-              <td>text</td>
-            </tr>
-            <tr>
-              <td>1,009</td>
-              <td>placeholder</td>
-              <td>irrelevant</td>
-              <td>visual</td>
-              <td>layout</td>
-            </tr>
-            <tr>
-              <td>1,010</td>
-              <td>data</td>
-              <td>rich</td>
-              <td>dashboard</td>
-              <td>tabular</td>
-            </tr>
-            <tr>
-              <td>1,011</td>
-              <td>information</td>
-              <td>placeholder</td>
-              <td>illustrative</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,012</td>
-              <td>text</td>
-              <td>placeholder</td>
-              <td>layout</td>
-              <td>dashboard</td>
-            </tr>
-            <tr>
-              <td>1,013</td>
-              <td>dashboard</td>
-              <td>irrelevant</td>
-              <td>text</td>
-              <td>visual</td>
-            </tr>
-            <tr>
-              <td>1,014</td>
-              <td>dashboard</td>
-              <td>illustrative</td>
-              <td>rich</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,015</td>
-              <td>random</td>
-              <td>tabular</td>
-              <td>information</td>
-              <td>text</td>
-            </tr>
-          </tbody>
-        </table>
+      <tr height="50">
+        <td colspan="2" bgcolor="#DAF1FF">Detalles de los Apartados</td>
+      </tr>
+
+      <tr >
+        <td colspan="2">
+          <br>
+          <label for="referencia">Refrencia</label><br>
+          <input placeholder="Refrencia" type="number" id="referencia" name="referencia" required>
+          <br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <label for="nom_producto">Nombre del producto</label><br>
+          <input placeholder="Producto"type="text" id="nom_producto" size="100" name="nom_producto" required>
+          <br><br>
+        </td>
+
+        
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <label for="nom_producto">Proveedores</label><br>
+          <select name="proveedores">
+              <option value="value1">Value 1</option>
+              <option value="value2">Value 2</option>
+              <option value="value3">Value 3</option>
+        </select>
+        </td>
+      
+      </tr>
+
+      <tr>
+        <td> 
+          <label for="cant">Cantidad del producto</label><br>
+         <input placeholder="Cantidad"type="number" id="cant" name="cant" required>
+         <br><br>
+        </td>
+
+        <td>
+          <label for="cant">Cantidad del producto</label><br>
+         <input placeholder="Cantidad"type="number" id="cant" name="cant" required>
+         <br><br>
+        </td>
+      
+      </tr>
+
+      <tr>
+        <td colspan="2">      
+          <label for="total">Valor total</label><br>
+         <input placeholder="Total"type="number" id="total" name="total" required>
+        <br><br>
+      </td>
+
+      </tr>
+
+      <tr>
+        
+        <br>
+        <td colspan="2">
+        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Apartar</button> 
+
+        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Buscar Apartado Existente </button> 
+
+        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Limpiar Pantalla</button>
+          <br><br>
+        </td>
+      </tr>
+
+     </table>
+        
+      </div>
+   
       </div>
     </main>
   </div>
