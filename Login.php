@@ -1,3 +1,18 @@
+<?php
+include conection; 
+
+session_start();
+
+if(isset($_GET['cerrar sesion'])){
+  session_unset();
+  
+  session_destroy();
+}
+
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
