@@ -10,7 +10,7 @@ $consult = "SELECT * FROM usuarios WHERE correo='$correo' and contrasena='$contr
 $resultado = mysqli_query($conex,$consult);
 
 if($resultado==true){
-    echo "location: index.php";
+    header("location: index.php");
 }
 
 ?>
