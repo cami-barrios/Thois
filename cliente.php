@@ -191,75 +191,79 @@
       </div>
 
       
-      <div style="text-align: center; ">
-      <table>  
-        
-        <tr>
-          <td colspan="2"> <label for="nom_cliente">Nombre del Cliente</label>
-          <input placeholder="Cliente"type="text" id="nom_cliente" name="nom_cliente" required>
-        </td>
-        <td colspan="3"></td>
-        <td>
-         <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Guardar Cliente</button>
-         <br>
-        </td>
-        </tr>
+      <link href="form-validation.css" rel="stylesheet">
+     <div class="container">
+        <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3" >Adicion de Clientes</h4><br><br>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+           
+            <div class="col-sm-6">
+              <label for="referencia" class="form-label">Referencia Cliente</label>
+              <input type="number" class="form-control" id="referencia" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta la referencia.
+              </div>
+            </div>
 
-        
-        <tr>
-        <td colspan="2">
-          <label for="nom_cliente">Apellido del cliente</label>
-          <input placeholder="Cliente" type="text" id="nom_cliente" name="nom_cliente" required>
-            <br>
-         </td>
-          <td colspan="3"></td>
-         <td>
-          <br>
-          <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Limpiar Pantalla</button>
-          <br> <br>
-        </td>
-        </tr>
 
-        <tr>
-        <td>
-        <label for="cel_1">Celular 1</label>
-        <input placeholder="Cel 1"type="number" id="cel_1" name="cel_1" required>
-        </td>
+            <div class="col-12">
+              <label for="nom_product" class="form-label">Nombre Cliente</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="nom_cliente" placeholder="" required>
+              <div class="invalid-feedback">
+                  Nombre del cliente requerido.
+                </div>
+              </div>
+            </div>
 
-        <td>
-        <label for="cel_2">Celular 2</label>
-        <input placeholder="Cel 2"type="number" id="cel_2" name="cel_2" required>
-        </td>
-        <td colspan="3"></td>
-        <td>
-        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Inhabilitar Cliente</button>
-        <br> <br>
-        </td>
-        </tr>
+              <div class="col-12">
+              <label for="nom_product" class="form-label">Apellido Cliente</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="ape_cliente" placeholder="" required>
+              <div class="invalid-feedback">
+                  apellido del cliente requerido.
+                </div>
+              </div>
+            </div>
 
-        <tr>
-        <td>
-        <label for="mail">Correo Cliente</label>
-        <input placeholder="Correo Electronico" type="email" id="mail" name="user_mail"> 
-        </td>
-        <td colspan="4"></td><br> <br>
-        <td>
-          <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" > Habilitar Cliente</button>
-          <br> <br>
-          </td>
-        </tr>
+            <div class="col-12">
+              <label for="email" class="form-label">Email Cliente <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="">
+              <div class="invalid-feedback">
+                Correo no valido.
+              </div>
+            </div>
 
-        <tr>
-        <td colspan="5"> </td>
-        <td>
-          <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Buscar Cliente Existente </button> <br>
-        </td>         
-  </tr>
-</table>
+            <div class="col-sm-6">
+              <label for="cant" class="form-label">Cantidad Del Producto</label>
+              <input type="number" class="form-control" id="cant" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta la Cantidad del Producto.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="V_uni2" class="form-label">Valor Unitario Stock</label>
+              <input type="number" class="form-control" id="V_uni2" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta el Valor Unitario.
+              </div>
+            </div>
+          
+
+          <hr class="my-5">
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Guardar Cliente</button> 
+
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Limpiar Pantalla </button> 
+
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Habilitar Cliente</button>
+
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Inhabilitar Cliente</button>
+
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Buscar Cliente Existente</button>
  
-      </div>
-          </tbody>
-        </table>
+
       </div>
     </main>
   </div>
