@@ -190,89 +190,82 @@
         </div>
       </div>     
        
-     <div>  
-     <table> 
+             <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3" >Agregar Apartados</h4><br>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="referencia" class="form-label">Referencia</label>
+              <input type="number" class="form-control" id="referencia" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta la referencia.
+              </div>
+            </div>
 
-      <tr height="50">
-        <td colspan="2" bgcolor="#DAF1FF">Detalles de los Apartados</td>
-      </tr>
+              <div class="col-sm-6">
+              <label for="referencia" class="form-label">Plazo a Pagar y Retirar Producto</label>
+              <input type="number" class="form-control" id="referencia" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta el Plazo maximo.
+              </div>
+            </div>
 
-      <tr >
-        <td>
-          <br>
-          <label for="referencia">Refrencia</label><br>
-          <input placeholder="Refrencia" type="number" id="referencia" name="referencia" required>
-          <br><br>
-        </td>
-        
-        <td>
-          <br><br>
-          <label for="plazo">Plazo a pagar</label><br>
-         <input placeholder="Plazo"type="number" id="plazo" name="plazo" required>
-         <br><br>
-        </td>
+             <div class="col-md-12">
+              <label for="selecion" class="form-label">Nombre Del Producto</label>
+              <select class="form-select" id="Nom_producto" required>
+                <option value="">Selecciona el Producto a Apartar</option>
+                <option>Producto 1 </option>
+                <option>Producto 2 </option>
+              </select>
+              <div class="invalid-feedback">
+                Selecciona un Producto.
+              </div>
+            </div>
 
-      </tr>
+            <div class="col-md-12">
+              <label for="selecion" class="form-label">Nombre Cliente</label>
+              <select class="form-select" id="Nom_cliente" required>
+                <option value="">Selecciona Cliente </option>
+                <option>Cliente 1 </option>
+                <option>Cliente 2</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecciona a un Cliente.
+              </div>
+            </div>
 
-      <tr>
-        <td colspan="2">
-          <label for="nom_producto">Nombre del producto</label><br>
-          <input placeholder="Producto"type="text" id="nom_producto" size="100" name="nom_producto" required>
-          <br><br>
-        </td>
+            <div class="col-sm-6">
+              <label for="cant" class="form-label">Cantidad Del Producto</label>
+              <input type="number" class="form-control" id="cant" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta la Cantidad del Producto.
+              </div>
+            </div>
 
-        
-      </tr>
+            <div class="col-sm-6">
+              <label for="V_uni2" class="form-label">Valor Unitario Stock</label>
+              <input type="number" class="form-control" id="V_uni2" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta el Valor Unitario.
+              </div>
+            </div>
 
-      <tr>
-        <td colspan="2">
-          <label for="nom_cliente">Nombre del cliente</label><br>
-          <input placeholder="Cliente"type="text" id="nom_cliente" size="100" name="nom_cliente" required>
-          <br><br>
-        </td>
-      
-      </tr>
 
-      <tr>
-        <td> 
-          <label for="cant">Cantidad del producto</label><br>
-         <input placeholder="Cantidad"type="number" id="cant" name="cant" required>
-         <br><br>
-        </td>
+              <div class="col-sm-6">
+              <label for="V_uni2" class="form-label">Valor Total</label>
+              <input type="number" class="form-control" id="V_total" placeholder="" value="" readonly>
+              <div class="invalid-feedback">
+                Falta el Valor Unitario.
+              </div>
+            </div>
 
-        <td>
-          <label for="V_uni">Valor Unitario</label><br>
-         <input placeholder="Precio unidad"type="number" id="V_uni" name="V_uni" required>
-         <br><br>
-        </td>
-      
-      </tr>
+          <hr class="my-5">
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Apartar Producto</button> 
 
-      <tr>
-        <td colspan="2">      
-          <label for="total">Valor total</label><br>
-         <input placeholder="Total"type="number" id="total" name="total" required>
-        <br><br>
-      </td>
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Limpiar Pantalla </button> 
 
-      </tr>
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Buscar Apartados Existente</button>
 
-      <tr>
-        
-        <br>
-        <td colspan="2">
-        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Apartar</button> 
-
-        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Buscar Apartado Existente </button> 
-
-        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Limpiar Pantalla</button>
-          <br><br>
-        </td>
-      </tr>
-     </table>     
-      </div>
-          </tbody>
-        </table>
       </div>
     </main>
   </div>
