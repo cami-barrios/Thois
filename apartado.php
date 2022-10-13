@@ -241,8 +241,8 @@
         </td>
 
         <td>
-          <label for="cant">Cantidad del producto</label><br>
-         <input placeholder="Cantidad"type="number" id="cant" name="cant" required>
+          <label for="V_uni">Valor Unitario</label><br>
+         <input placeholder="Precio unidad"type="number" id="V_uni" name="V_uni" required>
          <br><br>
         </td>
       
@@ -269,9 +269,7 @@
           <br><br>
         </td>
       </tr>
-
-     </table>
-        
+     </table>     
       </div>
           </tbody>
         </table>
