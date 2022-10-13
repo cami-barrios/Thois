@@ -181,7 +181,7 @@
       </div>
     </nav>
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">BIENVENIDO ADMINISTRADOR</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
@@ -190,7 +190,56 @@
         </div>
       </div>
 
-      
+        <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3" >Agregar Compra</h4><br>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="referencia" class="form-label">Referencia</label>
+              <input type="number" class="form-control" id="referencia" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta la referencia.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="cant_stock" class="form-label">Cantidad de Stock</label>
+              <input type="number" class="form-control" id="stock" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta stock entrante.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="nom_product" class="form-label">Nombre Producto</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="nom_product" placeholder="" required>
+              <div class="invalid-feedback">
+                  Nombre del producto requerido.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <label for="selecion" class="form-label">Proveedores</label>
+              <select class="form-select" id="provee" required>
+                <option value="">Selecciona Tipo de Venta</option>
+                <option>Venta al Detal </option>
+                <option>Venta al por Mayor </option>
+              </select>
+              <div class="invalid-feedback">
+                Selecciona un Tipo de Venta.
+              </div>
+            </div>
+          
+
+          <hr class="my-5">
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Agregar Venta</button> 
+
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Limpiar Pantalla </button> 
+
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Buscar Venta Existente</button>
+ 
       </div>
     </main>
   </div>
