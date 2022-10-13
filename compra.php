@@ -73,7 +73,6 @@
     <!-- Custom styles for this template -->
     <link href="dashboard.css" rel="stylesheet">
   </head>
-  <body>
     
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   <img src="img/thois.png" width="70" height="70">
@@ -190,40 +189,58 @@
         </div>
       </div>
 
-      <div style="text-align: center; ">
+        <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3" >Agregar Compra</h4><br>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="referencia" class="form-label">Referencia</label>
+              <input type="number" class="form-control" id="referencia" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta la referencia.
+              </div>
+            </div>
 
-        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Agregar Compra</button>
-        <br>
-        <br>
+            <div class="col-sm-6">
+              <label for="cant_stock" class="form-label">Cantidad de Stock</label>
+              <input type="number" class="form-control" id="stock" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta stock entrante.
+              </div>
+            </div>
 
-        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Limpiar Pantalla</button>
-        <br>
-        <br>
+            <div class="col-12">
+              <label for="nom_product" class="form-label">Nombre Producto</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="nom_product" placeholder="" required>
+              <div class="invalid-feedback">
+                  Nombre del producto requerido.
+                </div>
+              </div>
+            </div>
 
-        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Resetear Compra</button>
-        <br>
-        <br>
+            <div class="col-md-12">
+              <label for="provee" class="form-label">Proveedores</label>
+              <select class="form-select" id="provee" required>
+                <option value="">Selecciona Proveedor</option>
+                <option>proveedor 1</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecciona un proveedor.
+              </div>
+            </div>
+          
 
-        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" > Buscar Compras </button>
-        <br>
-        <br>
+          <hr class="my-5">
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Agregar Compra</button> 
 
-        <label for="referencia">Refrencia</label><br>
-        <input placeholder="Refrencia"type="number" id="referencia" name="referencia" required>
-        <br><br>
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Limpiar Pantalla </button> 
 
-        <label for="Stock">Stock que llega</label><br>
-        <input placeholder="Cantidad de Stock"type="number" id="Stock" name="Stock" required>
-        <br><br>
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Resetear Compra</button>
 
-        <label for="nom_producto">Nombre del producto</label><br>
-          <input placeholder="Producto"type="text" id="nom_producto" name="nom_producto" required>
-          <br><br>
-
-        <label for="nom_provee">Nombre del proveedor</label><br>
-          <input placeholder="Proveedor"type="text" id="nom_provee" name="nom_provee" required>
-          <br><br>
-      </div>
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Buscar Compra Existente</button>
+ 
+          </div>
     </main>
   </div>
 </div>
