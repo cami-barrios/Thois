@@ -190,135 +190,84 @@
         </div>
       </div>
 
-      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+      
+      <link href="form-validation.css" rel="stylesheet">
+     <div class="container">
+        <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3" >Adicion de Proveedores</h4><br><br>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+           
+            <div class="col-sm-6">
+              <label for="referencia" class="form-label">Referencia Proveedor</label>
+              <input type="number" class="form-control" id="referencia" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta la referencia.
+              </div>
+            </div>
 
-      <h2>Section title</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1,001</td>
-              <td>random</td>
-              <td>data</td>
-              <td>placeholder</td>
-              <td>text</td>
-            </tr>
-            <tr>
-              <td>1,002</td>
-              <td>placeholder</td>
-              <td>irrelevant</td>
-              <td>visual</td>
-              <td>layout</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>data</td>
-              <td>rich</td>
-              <td>dashboard</td>
-              <td>tabular</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>information</td>
-              <td>placeholder</td>
-              <td>illustrative</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,004</td>
-              <td>text</td>
-              <td>random</td>
-              <td>layout</td>
-              <td>dashboard</td>
-            </tr>
-            <tr>
-              <td>1,005</td>
-              <td>dashboard</td>
-              <td>irrelevant</td>
-              <td>text</td>
-              <td>placeholder</td>
-            </tr>
-            <tr>
-              <td>1,006</td>
-              <td>dashboard</td>
-              <td>illustrative</td>
-              <td>rich</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,007</td>
-              <td>placeholder</td>
-              <td>tabular</td>
-              <td>information</td>
-              <td>irrelevant</td>
-            </tr>
-            <tr>
-              <td>1,008</td>
-              <td>random</td>
-              <td>data</td>
-              <td>placeholder</td>
-              <td>text</td>
-            </tr>
-            <tr>
-              <td>1,009</td>
-              <td>placeholder</td>
-              <td>irrelevant</td>
-              <td>visual</td>
-              <td>layout</td>
-            </tr>
-            <tr>
-              <td>1,010</td>
-              <td>data</td>
-              <td>rich</td>
-              <td>dashboard</td>
-              <td>tabular</td>
-            </tr>
-            <tr>
-              <td>1,011</td>
-              <td>information</td>
-              <td>placeholder</td>
-              <td>illustrative</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,012</td>
-              <td>text</td>
-              <td>placeholder</td>
-              <td>layout</td>
-              <td>dashboard</td>
-            </tr>
-            <tr>
-              <td>1,013</td>
-              <td>dashboard</td>
-              <td>irrelevant</td>
-              <td>text</td>
-              <td>visual</td>
-            </tr>
-            <tr>
-              <td>1,014</td>
-              <td>dashboard</td>
-              <td>illustrative</td>
-              <td>rich</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,015</td>
-              <td>random</td>
-              <td>tabular</td>
-              <td>information</td>
-              <td>text</td>
-            </tr>
-          </tbody>
-        </table>
+
+            <div class="col-12">
+              <label for="nom_proveedor" class="form-label">Nombre el Proveedor</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="nom_proveedor" placeholder="" required>
+              <div class="invalid-feedback">
+                  Nombre del Proveedor requerido.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="celular1" class="form-label">Celular 1</label>
+              <input type="number" class="form-control" id="celular1" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta el numero de contacto del proveedor.
+              </div>
+            </div>
+
+
+            <div class="col-sm-6">
+              <label for="celular2" class="form-label">Celular 2 (Opcional)</label>
+              <input type="number" class="form-control" id="celular2" placeholder="" value="">
+            </div>
+
+              <div class="col-12">
+              <label for="email" class="form-label">Email Proveedor (opcional) <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="">
+              <div class="invalid-feedback">
+                Correo no valido.
+              </div>
+            </div>
+
+              <div class="col-12">
+              <label for="dire_proveedor" class="form-label">Direccion proveedor (Opcional)</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="dire_proveedor" placeholder="" >
+              </div>
+            </div>
+
+              <div class="col-12">
+              <label for="ciu_proveedor" class="form-label">Ciudad Proveedor</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="ciu_proveedor" placeholder="" >
+                <div class="invalid-feedback">
+                Falta la ciudad del proveedor.
+              </div>
+              </div>
+            </div>
+
+
+        <hr class="my-5">
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Agregar Proveedor</button> 
+
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Limpiar Pantalla </button> 
+
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Habilitar Proveedor</button>
+
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Inhabilitar Proveedor</button>
+
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Buscar Proveedores Existente</button>
+ 
       </div>
     </main>
   </div>
