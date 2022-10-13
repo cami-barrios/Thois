@@ -6,15 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
-    <title>Dashboard Template · Bootstrap v5.2</title>
+    <title></title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
 
-    
-
-    
-
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -185,90 +181,79 @@
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">BIENVENIDO ADMINISTRADOR</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group me-2">
+          <div class="btn-group me-2">           
           </div>
         </div>
       </div>
+ 
+    <link href="form-validation.css" rel="stylesheet">
+     <div class="container">
+        <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3" >Adicion de Productos</h4><br><br>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="referencia" class="form-label">Referencia</label>
+              <input type="number" class="form-control" id="referencia" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta la referencia.
+              </div>
+            </div>
 
-     <div>  
-     <table> 
 
-      <tr height="50">
-        <td colspan="2" bgcolor="#DAF1FF">Detalles de los Apartados</td>
-      </tr>
+            <div class="col-12">
+              <label for="nom_product" class="form-label">Nombre Producto</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="nom_product" placeholder="" required>
+              <div class="invalid-feedback">
+                  Nombre del producto requerido.
+                </div>
+              </div>
+            </div>
 
-      <tr >
-        <td colspan="2">
-          <br>
-          <label for="referencia">Refrencia</label><br>
-          <input placeholder="Refrencia" type="number" id="referencia" name="referencia" required>
-          <br><br>
-        </td>
-      </tr>
+            <div class="col-md-12">
+              <label for="provee" class="form-label">Proveedores</label>
+              <select class="form-select" id="provee" required>
+                <option value="">Selecciona Proveedor</option>
+                <option>proveedor 1</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecciona un proveedor.
+              </div>
+            </div>
 
-      <tr>
-        <td colspan="2">
-          <label for="nom_producto">Nombre del producto</label><br>
-          <input placeholder="Producto"type="text" id="nom_producto" size="100" name="nom_producto" required>
-          <br><br>
-        </td>
+            <div class="col-sm-6">
+              <label for="cant" class="form-label">Cantidad Del Producto</label>
+              <input type="number" class="form-control" id="cant" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta la Cantidad del Producto.
+              </div>
+            </div>
 
-        
-      </tr>
+            <div class="col-sm-6">
+              <label for="V_uni2" class="form-label">Valor Unitario Stock</label>
+              <input type="number" class="form-control" id="V_uni2" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Falta el Valor Unitario.
+              </div>
+            </div>
 
-      <tr>
-        <td colspan="2">
-          <label for="nom_producto">Proveedores</label><br>
-          <select name="proveedores">
-              <option value="value1">Value 1</option>
-              <option value="value2">Value 2</option>
-              <option value="value3">Value 3</option>
-        </select>
-        </td>
-      
-      </tr>
+            <div class="form-outline">
+            <label class="form-label" for="textarea_descripcion">Descripcion Producto (opcional) </label>
+            <textarea class="form-control" id="textarea_descripcion" rows="4"> </textarea>
+            </div>
+          
 
-      <tr>
-        <td> 
-          <label for="cant">Cantidad del producto</label><br>
-         <input placeholder="Cantidad"type="number" id="cant" name="cant" required>
-         <br><br>
-        </td>
+          <hr class="my-5">
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Agregar Producto</button> 
 
-        <td>
-          <label for="cant">Cantidad del producto</label><br>
-         <input placeholder="Cantidad"type="number" id="cant" name="cant" required>
-         <br><br>
-        </td>
-      
-      </tr>
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Limpiar Pantalla </button> 
 
-      <tr>
-        <td colspan="2">      
-          <label for="total">Valor total</label><br>
-         <input placeholder="Total"type="number" id="total" name="total" required>
-        <br><br>
-      </td>
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Corregir Producto</button>
 
-      </tr>
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Buscar Producto Existente</button>
+ 
 
-      <tr>
-        
-        <br>
-        <td colspan="2">
-        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Apartar</button> 
-
-        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Buscar Apartado Existente </button> 
-
-        <button type="button" class="btn btn-sm btn-outline-secondary" style="height:50px; width:150px" >Limpiar Pantalla</button>
-          <br><br>
-        </td>
-      </tr>
-
-     </table>
-        
-      </div>
-   
       </div>
     </main>
   </div>
