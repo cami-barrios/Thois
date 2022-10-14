@@ -1,3 +1,4 @@
+
 <?php 
 
 if(isset($_POST['submit'])){
@@ -98,11 +99,11 @@ if(isset($_POST['submit'])){
     <h1 class="h3 mb-3 fw-normal">Inicio de Sesión</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="correo">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="correo" value="<?php if(isset($correo)) echo $correo ?>">
       <label for="floatingInput">Correo</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="contrasena">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="contrasena" value="<?php if(isset($contrasena)) echo $contrasena ?>">
       <label for="floatingPassword">Contrasena</label>
     </div>
     <input class="w-100 btn btn-lg btn-primary" type="submit" value="Iniciar Sesión" name="submit">
