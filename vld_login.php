@@ -3,16 +3,16 @@
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	require_once 'conexion.php';
 
-	$correo=$_POST['email'];
-	$cont=$_POST['pass'];
+	$correo=$_POST['correo'];
+	$cont=$_POST['contrasena'];
 
-	$query = "SELECT * FROM usuarios WHERE email='".$correo."' and contrasena='".$cont."'";
+	$query = "SELECT * FROM usuarios WHERE correo='".$correo."' and contrasena='".$cont."'";
 	$result = $mysql->query($query);
 	
 	if($mysql->affected_rows > 0){
 		header("Location: index.php");
 	}else{
-		echo "Usuario no existe";
+		echo "<p class='error'>* Usuario no existe</p>";
 	}
 	$result->close();
 	$mysql->close();
