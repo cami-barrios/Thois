@@ -1,5 +1,14 @@
+<?php 
+
+if(isset($_POST['submit'])){
+    $correo = $_POST['correo'];
+    $contrasena = $_POST['contrasena'];
+}
+
+?>
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,6 +76,14 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+
+      .error{
+        margin-top: 10px;
+        background-color: red;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+      }
     </style>
 
     
@@ -76,20 +93,22 @@
   <body class="text-center">
     
 <main class="form-signin w-100 m-auto">
-  <form action="vld_login.php" method="post">
-    <img class="mb-4" src="thois.png" width="180" height="180">
-    <h1 class="h3 mb-3 fw-normal">Inicio de Sesion</h1>
+  <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
+    <img class="mb-4" src="img/thois.png" width="180" height="180">
+    <h1 class="h3 mb-3 fw-normal">Inicio de Sesión</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="correo">
       <label for="floatingInput">Correo</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="contrasena">
       <label for="floatingPassword">Contrasena</label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesion</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2022–2026</p>
+    <input class="w-100 btn btn-lg btn-primary" type="submit" value="Iniciar Sesión" name="submit">
+    <?php
+        include("val_form.php");
+    ?>
   </form>
 </main>
   </body>
