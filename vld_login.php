@@ -1,16 +1,21 @@
 <?php
 
-$correo = $_POST['correo'];
-$contrasena = $_POST['contrasena'];
+if ($_SERVER["REQUEST_METHOD"]=="POST") {
+	require_once 'conexion.php';
 
-$conex = mysqli_connect("localhost","root","@1GaKnO^Z)UeMeq)","id17937793_thois");
+	$correo=$_POST['email'];
+	$cont=$_POST['pass'];
 
-$consult = "SELECT * FROM usuarios WHERE correo='$correo' and contrasena='$contrasena'";
-
-$resultado = mysqli_query($conex,$consult);
-
-if($resultado==true){
-    header("location: index.php")
+	$query = "SELECT * FROM usuarios WHERE email='".$correo."' and contrasena='".$cont."'";
+	$result = $mysql->query($query);
+	
+	if($mysql->affected_rows > 0){
+		header("Location: home.html");
+	}else{
+		echo "Usuario no existe";
+	}
+	$result->close();
+	$mysql->close();
 }
 
 ?>
