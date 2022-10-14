@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$result = $mysql->query($query);
 	
 	if($mysql->affected_rows > 0){
-		header("Location: home.html");
+		header("Location: index.php");
 	}else{
 		echo "Usuario no existe";
 	}
