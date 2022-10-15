@@ -229,9 +229,6 @@ if(isset($_POST['submit'])){
             <div class="col-sm-6">
               <label for="referencia" class="form-label">Referencia</label>
               <input type="text" class="form-control" id="referencia" placeholder="" name="ref" value="<?php if(isset($ref)) echo $ref ?>">
-              <div class="invalid-feedback">
-                Falta la referencia.
-              </div>
             </div>
 
 
@@ -239,9 +236,6 @@ if(isset($_POST['submit'])){
               <label for="nom_product" class="form-label">Nombre Producto</label>
               <div class="input-group has-validation">
                 <input type="text" class="form-control" id="nom_product" placeholder="" name="nombreprod" value="<?php if(isset($nombreprod)) echo $nombreprod ?>">
-              <div class="invalid-feedback">
-                  Nombre del producto requerido.
-                </div>
               </div>
             </div>
 
@@ -251,25 +245,16 @@ if(isset($_POST['submit'])){
                 <option value="">Selecciona Proveedor</option>
                 <option>proveedor 1</option>
               </select>
-              <div class="invalid-feedback">
-                Selecciona un proveedor.
-              </div>
             </div>
 
             <div class="col-sm-6">
               <label for="cant" class="form-label">Cantidad Del Producto</label>
               <input type="number" class="form-control" id="cant" placeholder="" name="cantidad" value="<?php if(isset($cantidad)) echo $cantidad ?>">
-              <div class="invalid-feedback">
-                Falta la Cantidad del Producto.
-              </div>
             </div>
 
             <div class="col-sm-6">
               <label for="V_uni2" class="form-label">Valor Unitario Stock</label>
               <input type="number" class="form-control" id="V_uni2" placeholder="" name="precio" value="<?php if(isset($precio)) echo $precio ?>">
-              <div class="invalid-feedback">
-                Falta el Valor Unitario.
-              </div>
             </div>
 
             <div class="form-outline">
