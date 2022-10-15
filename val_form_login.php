@@ -1,18 +1,26 @@
 <?php
 if(isset($_POST['submit'])){
+
+    $errores = array();
+
     if(empty($correo)){
-        echo "<p class='error'>* Agrege un correo</p>";
+        $errores[] = "<p class='error'>* Agrege un correo</p>";
     }else{
         if(!filter_var($correo, FILTER_VALIDATE_EMAIL)){
-            echo "<p class='error'>* Direccion de correo invalida</p>";
+            $errores[] = "<p class='error'>* Direccion de correo invalida</p>";
         }
     }
 
     if(empty($contrasena)){
-        echo "<p class='error'>* Agrege la Contrase&ntildea</p>";
+        $errores[] = "<p class='error'>* Agrege la Contrase&ntildea</p>";
     }
 
-    if(!empty($correo) && !empty($contrasena)){
+    for($i = 0;$i < count($errores); $i++){
+        echo $errores[$i];
+        echo "<br>";
+    }
+
+    if(!empty($correo) && !empty($contrasena) && count($errores)==0){
         include("vld_login.php");
     }
 
