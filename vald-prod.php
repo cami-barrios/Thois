@@ -6,6 +6,10 @@ if(isset($_POST['submit'])){
     $cantidad = $_POST['cantidad'];
     $precio = $_POST['precio'];
 
+    if(isset($_POST['descprod'])){
+        $descripcion = $_POST['descprod'];
+    }
+
     if(empty($ref)){
         echo "<p class='error'>*Referencia esta vacio</p>";
     }
@@ -26,6 +30,10 @@ if(isset($_POST['submit'])){
         echo "<p class='error'>*El precio esta vacio</p>";
     }else if(!is_numeric($precio)){
         echo "<p class='error'>*El precio debe ser numerico</p>";
+    }
+
+    if(!empty($ref) and !empty($nombreprod) and !empty($cantidad) and !empty($precio)){
+        include("insert-prod.php");
     }
 
 }
