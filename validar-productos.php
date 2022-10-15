@@ -36,6 +36,7 @@ if(isset($_POST['submit'])){
 
     for($i = 0;$i < count($errores); $i++){
         echo $errores[$i];
+        echo "<br>";
     }
 
     if(!empty($ref) and !empty($nombreprod) and !empty($cantidad) and !empty($precio) && count($errores)==0){
