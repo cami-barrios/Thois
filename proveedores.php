@@ -1,5 +1,30 @@
+
+<?php 
+
+if(isset($_POST['submit'])){
+    $ref = $_POST['refprov'];
+    $nombre = $_POST['nombreprov'];
+    $celular1 = $_POST['celprov1'];
+    $ciudprov = $_POST['ciudprov'];
+
+    if(isset($_POST['celprov2'])){
+      $celular2 = $_POST['celprov2'];
+  }
+
+  if(isset($_POST['correoprov'])){
+    $correoprov = $_POST['correoprov'];
+}
+
+if(isset($_POST['direcprov'])){
+  $direccionprov = $_POST['direcprov'];
+}
+
+}
+
+?>
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,6 +92,25 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+
+      .error{
+        margin-top: 10px;
+        background-color: red;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .inform{
+        margin-top: 10px;
+        background-color: green;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
     </style>
 
     
@@ -195,70 +239,54 @@
      <div class="container">
         <div class="col-md-7 col-lg-8">
         <h4 class="mb-3" >Adicion de Proveedores</h4><br><br>
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation" novalidate action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
           <div class="row g-3">
            
             <div class="col-sm-6">
               <label for="referencia" class="form-label">Referencia Proveedor</label>
-              <input type="number" class="form-control" id="referencia" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Falta la referencia.
-              </div>
+              <input type="text" class="form-control" id="referencia" placeholder="" name="refprov" value="<?php if(isset($ref)) echo $ref ?>">
             </div>
 
 
             <div class="col-12">
               <label for="nom_proveedor" class="form-label">Nombre el Proveedor</label>
               <div class="input-group has-validation">
-                <input type="text" class="form-control" id="nom_proveedor" placeholder="" required>
-              <div class="invalid-feedback">
-                  Nombre del Proveedor requerido.
-                </div>
+                <input type="text" class="form-control" id="nom_proveedor" placeholder="" name="nombreprov" value="<?php if(isset($nombre)) echo $nombre ?>">
               </div>
             </div>
 
             <div class="col-sm-6">
               <label for="celular1" class="form-label">Celular 1</label>
-              <input type="number" class="form-control" id="celular1" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Falta el numero de contacto del proveedor.
-              </div>
+              <input type="number" class="form-control" id="celular1" placeholder="" name="celprov1" value="<?php if(isset($celular1)) echo $celular1 ?>">
             </div>
 
 
             <div class="col-sm-6">
               <label for="celular2" class="form-label">Celular 2 (Opcional)</label>
-              <input type="number" class="form-control" id="celular2" placeholder="" value="">
+              <input type="number" class="form-control" id="celular2" placeholder="" name="celprov2" value="<?php if(isset($celular2)) echo $celular2 ?>">
             </div>
 
               <div class="col-12">
               <label for="email" class="form-label">Email Proveedor (opcional) <span class="text-muted">(Optional)</span></label>
-              <input type="email" class="form-control" id="email" placeholder="">
-              <div class="invalid-feedback">
-                Correo no valido.
-              </div>
+              <input type="email" class="form-control" id="email" placeholder="" name="correoprov" value="<?php if(isset($correoprov)) echo $correoprov ?>">
             </div>
 
               <div class="col-12">
               <label for="dire_proveedor" class="form-label">Direccion proveedor (Opcional)</label>
               <div class="input-group has-validation">
-                <input type="text" class="form-control" id="dire_proveedor" placeholder="" >
+                <input type="text" class="form-control" id="dire_proveedor" placeholder="" name="direcprov" value="<?php if(isset($direccionprov)) echo $direccionprov ?>">
               </div>
             </div>
 
               <div class="col-12">
               <label for="ciu_proveedor" class="form-label">Ciudad Proveedor</label>
               <div class="input-group has-validation">
-                <input type="text" class="form-control" id="ciu_proveedor" placeholder="" >
-                <div class="invalid-feedback">
-                Falta la ciudad del proveedor.
-              </div>
+                <input type="text" class="form-control" id="ciu_proveedor" placeholder="" name="ciudprov" value="<?php if(isset($ciudprov)) echo $ciudprov ?>">
               </div>
             </div>
-
-
+            <?php include("vald-prov.php"); ?>
         <hr class="my-5">
-        <button type="submit" class="w-100 btn btn-primary btn-lg">Agregar Proveedor</button> 
+        <button type="submit" class="w-100 btn btn-primary btn-lg" name="submit">Agregar Proveedor</button> 
 
         <button type="submit" class="w-100 btn btn-primary btn-lg">Limpiar Pantalla </button> 
 
