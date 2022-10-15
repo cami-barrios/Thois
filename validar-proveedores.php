@@ -56,6 +56,7 @@ $errores = array();
 
         for($i = 0;$i < count($errores); $i++){
             echo $errores[$i];
+            echo "<br>";
         }
 
     if(!empty($ref) and !empty($nombre) and !empty($celular1) and !empty($ciudprov) && count($errores)==0){
