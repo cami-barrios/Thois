@@ -5,6 +5,10 @@ if(isset($_POST['submit'])){
     $nombreprod = $_POST['nombreprod'];
     $cantidad = $_POST['cantidad'];
     $precio = $_POST['precio'];
+
+    if(isset($_POST['descprod'])){
+        $descripcion = $_POST['descprod'];
+    }
 }
 
 ?>
@@ -78,6 +82,15 @@ if(isset($_POST['submit'])){
       .error{
         margin-top: 10px;
         background-color: red;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .inform{
+        margin-top: 10px;
+        background-color: green;
         color: white;
         padding: 5px;
         border-radius: 5px;
@@ -261,7 +274,7 @@ if(isset($_POST['submit'])){
 
             <div class="form-outline">
             <label class="form-label" for="textarea_descripcion">Descripcion Producto (opcional) </label>
-            <textarea class="form-control" id="textarea_descripcion" rows="4"> </textarea>
+            <textarea class="form-control" id="textarea_descripcion" rows="4" name="descprod"> </textarea>
             </div>
           
             <?php
