@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
     }
 
     if(empty($contrasena)){
-        echo "<p class='error'>* Agrege la contrasena</p>";
+        echo "<p class='error'>* Agrege la Contrase&ntildea</p>";
     }
 
     if(!empty($correo) && !empty($contrasena)){
