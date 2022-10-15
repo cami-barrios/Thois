@@ -1,5 +1,16 @@
+<?php 
+
+if(isset($_POST['submit'])){
+    $ref = $_POST['ref'];
+    $nombreprod = $_POST['nombreprod'];
+    $cantidad = $_POST['cantidad'];
+    $precio = $_POST['precio'];
+}
+
+?>
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,6 +74,16 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+
+      .error{
+        margin-top: 10px;
+        background-color: red;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
     </style>
 
     
@@ -190,11 +211,11 @@
      <div class="container">
         <div class="col-md-7 col-lg-8">
         <h4 class="mb-3" >Adicion de Productos</h4><br><br>
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation" novalidate action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="referencia" class="form-label">Referencia</label>
-              <input type="number" class="form-control" id="referencia" placeholder="" value="" required>
+              <input type="text" class="form-control" id="referencia" placeholder="" name="ref" value="<?php if(isset($ref)) echo $ref ?>">
               <div class="invalid-feedback">
                 Falta la referencia.
               </div>
@@ -204,7 +225,7 @@
             <div class="col-12">
               <label for="nom_product" class="form-label">Nombre Producto</label>
               <div class="input-group has-validation">
-                <input type="text" class="form-control" id="nom_product" placeholder="" required>
+                <input type="text" class="form-control" id="nom_product" placeholder="" name="nombreprod" value="<?php if(isset($nombreprod)) echo $nombreprod ?>">
               <div class="invalid-feedback">
                   Nombre del producto requerido.
                 </div>
@@ -224,7 +245,7 @@
 
             <div class="col-sm-6">
               <label for="cant" class="form-label">Cantidad Del Producto</label>
-              <input type="number" class="form-control" id="cant" placeholder="" value="" required>
+              <input type="number" class="form-control" id="cant" placeholder="" name="cantidad" value="<?php if(isset($cantidad)) echo $cantidad ?>">
               <div class="invalid-feedback">
                 Falta la Cantidad del Producto.
               </div>
@@ -232,7 +253,7 @@
 
             <div class="col-sm-6">
               <label for="V_uni2" class="form-label">Valor Unitario Stock</label>
-              <input type="number" class="form-control" id="V_uni2" placeholder="" value="" required>
+              <input type="number" class="form-control" id="V_uni2" placeholder="" name="precio" value="<?php if(isset($precio)) echo $precio ?>">
               <div class="invalid-feedback">
                 Falta el Valor Unitario.
               </div>
@@ -243,9 +264,13 @@
             <textarea class="form-control" id="textarea_descripcion" rows="4"> </textarea>
             </div>
           
+            <?php
+              include("vald-prod.php"); 
+            ?>
+
 
           <hr class="my-5">
-        <button type="submit" class="w-100 btn btn-primary btn-lg">Agregar Producto</button> 
+        <button type="submit" class="w-100 btn btn-primary btn-lg" name="submit" >Agregar Producto</button> 
 
         <button type="submit" class="w-100 btn btn-primary btn-lg">Limpiar Pantalla </button> 
 
